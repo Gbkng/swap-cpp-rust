@@ -1,0 +1,17 @@
+[package]
+name = "swap"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[dev-dependencies]
+criterion = "0.5.1"
+
+[profile.profiling]
+inherits = "release"
+debug = true
+
+[[bench]]
+name = "swap"
+harness = false
