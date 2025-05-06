@@ -31,13 +31,12 @@ fn naive_swap_vecs(c: &mut Criterion) {
             b.iter(|| {
                 naive_swap(&mut foo, &mut bar);
             });
-
-            assert!(*foo.first().unwrap() == 1);
-            assert!(*bar.first().unwrap() == 0);
-
-            assert!(*foo.last().unwrap() == 1);
-            assert!(*bar.last().unwrap() == 0);
         });
+        assert!(*foo.first().unwrap() == 1);
+        assert!(*bar.first().unwrap() == 0);
+
+        assert!(*foo.last().unwrap() == 1);
+        assert!(*bar.last().unwrap() == 0);
     }
 }
 criterion_group!(benches, swap_vecs, naive_swap_vecs);
